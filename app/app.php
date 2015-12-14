@@ -115,3 +115,8 @@ class database extends app{
 
     }
 }
+
+class categorie extends database
+{
+
+}
