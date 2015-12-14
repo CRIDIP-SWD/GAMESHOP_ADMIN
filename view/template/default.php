@@ -661,5 +661,8 @@
 <script src="<?= $constante->getUrl(array('js/')); ?>vendor/bootstrap.min.js"></script>
 <script src="<?= $constante->getUrl(array('js/')); ?>plugins.js"></script>
 <script src="<?= $constante->getUrl(array('js/')); ?>app.js"></script>
+
+<script src="<?= $constante->getUrl(array('js/')); ?>pages/ecomDashboard.js"></script>
+<script>$(function(){ EcomDashboard.init(); });</script>
 </body>
 </html>
