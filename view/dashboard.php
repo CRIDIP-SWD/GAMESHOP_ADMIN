@@ -26,7 +26,7 @@ $app->postPage("Accueil");
         foreach($data as $datas):
         ?>
         <li>
-            <a href=""><?= $datas['designation_categorie']; ?></a>
+            <a href=""><?= $datas[0]['designation_categorie']; ?></a>
         </li>
         <?php endforeach; ?>
     </ul>
