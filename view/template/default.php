@@ -624,7 +624,7 @@
                     </div>
                 </div>
                 <ul class="breadcrumb breadcrumb-top">
-                    <li><?= $constante::NOM_SITE; ?></li>
+                    <li><i class="fa fa-home"></i> <?= $constante::NOM_SITE; ?></li>
                     <?php if(!empty($app->getSector())){echo "<li>".$app->getSector()."</li>";} ?>
                     <?php if(!empty($app->getPage())){echo "<li>".$app->getPage()."</li>";} ?>
                 </ul>
