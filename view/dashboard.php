@@ -23,7 +23,7 @@ $app->postPage("Accueil");
         </li>
         <?php
         $data = $categorie->getAll();
-        foreach($data as $datas):
+        foreach($categorie->getAll() as $datas):
         ?>
         <li>
             <a href=""><?= $datas[0]->designation_categorie; ?></a>
