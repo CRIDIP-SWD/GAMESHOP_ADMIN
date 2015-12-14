@@ -23,12 +23,8 @@ $app->postPage("Accueil");
         </li>
         <?php
         $data = $categorie->getAll();
-        foreach($categorie->getAll() as $datas):
+        var_dump($data);
         ?>
-        <li>
-            <a href=""><?= $datas[0]->designation_categorie; ?></a>
-        </li>
-        <?php endforeach; ?>
     </ul>
 </div>
 <!-- END eCommerce Dashboard Header -->
