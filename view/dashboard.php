@@ -21,6 +21,11 @@ $app->postPage("Accueil");
         <li>
             <a href="page_ecom_product_edit.html"><i class="gi gi-pencil"></i> Product Edit</a>
         </li>
+        <?php
+        $data = $categorie->getAll();
+        var_dump($data);
+        die();
+        ?>
     </ul>
 </div>
 <!-- END eCommerce Dashboard Header -->

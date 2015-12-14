@@ -118,5 +118,10 @@ class database extends app{
 
 class categorie extends database
 {
-
+    public function getAll()
+    {
+        $sql = mysql_query("SELECT * FROM categories")or die(mysql_error());
+        $data = mysql_fetch_array($sql);
+        return $data;
+    }
 }
