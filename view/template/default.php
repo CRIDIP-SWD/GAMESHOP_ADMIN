@@ -619,7 +619,7 @@
                 <div class="content-header">
                     <div class="header-section">
                         <h1>
-                            <i class="gi gi-brush"></i><?php if(!empty($app->getSector())){echo $app->getSector();} ?><br><small><?php if(!empty($app->getPage())){echo $app->getPage()}; ?></small>
+                            <i class="gi gi-brush"></i><?php if(!empty($app->getSector())){echo $app->getSector();} ?><br><small><?php if(!empty($app->getPage())){echo $app->getPage();} ?></small>
                         </h1>
                     </div>
                 </div>
