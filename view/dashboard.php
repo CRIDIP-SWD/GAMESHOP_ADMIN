@@ -22,12 +22,11 @@ $app->postPage("Accueil");
             <a href="page_ecom_product_edit.html"><i class="gi gi-pencil"></i> Product Edit</a>
         </li>
         <?php
-        $data = $categorie->getAll();
-        while($data)
+        while($data = $categorie->getAll())
         {
         ?>
             <li><?= $data['idcategorie']; ?></li>
-            <?php } ?>
+        <?php } ?>
     </ul>
 </div>
 <!-- END eCommerce Dashboard Header -->
