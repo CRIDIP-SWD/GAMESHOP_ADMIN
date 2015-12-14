@@ -26,7 +26,7 @@ $app->postPage("Accueil");
         while($data)
         {
         ?>
-            <?= $data['idcategorie']; ?>
+            <li><?= $data['idcategorie']; ?></li>
             <?php } ?>
     </ul>
 </div>
