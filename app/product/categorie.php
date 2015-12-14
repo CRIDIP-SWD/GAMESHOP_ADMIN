@@ -15,7 +15,7 @@ class categorie
 
     public static function getAll()
     {
-        
+        database::getDB();
         $sql = mysql_query("SELECT * FROM categories")or die(mysql_error());
         $datas = mysql_fetch_array($sql);
         return $datas;
@@ -23,6 +23,7 @@ class categorie
 
     public static function getId($id)
     {
+        database::getDB();
         $sql = mysql_query("SELECT * FROM categorie
                             WHERE".self::$table." = ".$id)or die(mysql_error());
         $datas = mysql_fetch_array($sql);
