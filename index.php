@@ -1,7 +1,8 @@
 <?php
-require "app/autoloader.php";
-use App\Autoloader;
-Autoloader::register();
+require 'app/classe.php';
+App\autoloader::register();
+
+
 
 if(isset($_GET['view']))
 {
