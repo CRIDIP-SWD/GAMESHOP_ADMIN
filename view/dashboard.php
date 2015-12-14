@@ -24,6 +24,7 @@ $app->postPage("Accueil");
         <?php
         $data = $categorie->getAll();
         var_dump($data);
+        die();
         ?>
     </ul>
 </div>
