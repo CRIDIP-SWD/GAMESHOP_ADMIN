@@ -21,11 +21,6 @@ $app->postPage("Accueil");
         <li>
             <a href="page_ecom_product_edit.html"><i class="gi gi-pencil"></i> Product Edit</a>
         </li>
-        <?php foreach(\App\product\categorie::getAll() as $categorie): ?>
-        <li>
-            <a href="index.php?view=categories&id=<?= $categorie->idcategorie; ?>"><i class="gi gi-user"></i> <?= $categorie['designation_categorie']; ?></a>
-        </li>
-        <?php endforeach; ?>
     </ul>
 </div>
 <!-- END eCommerce Dashboard Header -->

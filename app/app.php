@@ -22,7 +22,7 @@ class app
     const DB_PASS       = "1992maxime";
     const DB_HOST       = "localhost";
 
-    private static $database;
+    protected static $database;
 
     public static function getDB()
     {
@@ -110,8 +110,8 @@ class database extends app{
 
     public function __construct()
     {
-        $connect = mysql_connect(self::DB_HOST, self::DB_USER, self::DB_PASS)or die(mysql_error());
-        $connect .= mysql_select_db(self::DB_NAME)or die(mysql_error());
+        self::$database = mysql_connect(self::DB_HOST, self::DB_USER, self::DB_PASS)or die(mysql_error());
+        self::$database .= mysql_select_db(self::DB_NAME)or die(mysql_error());
 
     }
 }
