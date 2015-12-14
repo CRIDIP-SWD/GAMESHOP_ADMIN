@@ -23,7 +23,7 @@ $app->postPage("Accueil");
         </li>
         <?php
         $data = $categorie->getAll();
-        var_dump($data);
+        print_r($data);
         die();
         ?>
     </ul>
