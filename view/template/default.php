@@ -574,7 +574,13 @@
             <header class="navbar navbar-default">
                 <!-- Left Header Navigation -->
                 <ul class="nav navbar-nav-custom">
-
+                    <!-- Main Sidebar Toggle Button -->
+                    <li>
+                        <a href="javascript:void(0)" onclick="App.sidebar('toggle-sidebar');">
+                            <i class="fa fa-bars fa-fw"></i>
+                        </a>
+                    </li>
+                    <!-- END Main Sidebar Toggle Button -->
 
                     <!-- Template Options -->
                     <!-- Change Options functionality can be found in js/app.js - templateOptions() -->
