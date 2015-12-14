@@ -11,7 +11,9 @@ if(isset($_GET['view']))
 }
 
 ob_start();
+
 if($view === 'dashboard'){require 'view/dashboard.php';}
+
 
 $content = ob_get_clean();
 require 'view/template/default.php';
