@@ -23,9 +23,11 @@ $app->postPage("Accueil");
         </li>
         <?php
         $data = $categorie->getAll();
-        var_dump($data);
-        die();
+        while($data)
+        {
         ?>
+            <?= $data['idcategorie']; ?>
+            <?php } ?>
     </ul>
 </div>
 <!-- END eCommerce Dashboard Header -->
