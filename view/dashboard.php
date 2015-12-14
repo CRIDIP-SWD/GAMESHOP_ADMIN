@@ -23,7 +23,7 @@ $app->postPage("Accueil");
         </li>
         <?php foreach(\App\product\categorie::all() as $categorie): ?>
         <li>
-            <a href="<?= //$categorie->url; ?>"><i class="gi gi-user"></i> <?= $categorie->designation_categorie; ?></a>
+            <a href=""><i class="gi gi-user"></i> <?= $categorie->designation_categorie; ?></a>
         </li>
         <?php endforeach; ?>
     </ul>
