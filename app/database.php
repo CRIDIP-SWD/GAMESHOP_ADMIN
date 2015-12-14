@@ -31,6 +31,7 @@ class database
         {
             $db = mysql_connect($this->host, $this->user, $this->pass)or die(mysql_error());
             $db .= mysql_select_db($this->dbname)or die(mysql_error());
+            $this->db = $db;
 
         }
         return $this->db;
