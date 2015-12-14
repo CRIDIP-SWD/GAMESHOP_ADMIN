@@ -21,9 +21,11 @@ $app->postPage("Accueil");
         <li>
             <a href="page_ecom_product_edit.html"><i class="gi gi-pencil"></i> Product Edit</a>
         </li>
+        <?php foreach(\App\product\categorie::all() as $categorie): ?>
         <li>
-            <a href="page_ecom_customer_view.html"><i class="gi gi-user"></i> Customer View</a>
+            <a href="<?= $categorie->url; ?>"><i class="gi gi-user"></i> <?= $categorie->designation_categorie</a>
         </li>
+        <?php endforeach; ?>
     </ul>
 </div>
 <!-- END eCommerce Dashboard Header -->
@@ -390,3 +392,5 @@ $app->postPage("Accueil");
     </div>
 </div>
 <!-- END Orders and Products -->
+<?php
+

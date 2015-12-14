@@ -14,8 +14,24 @@ namespace App;
  */
 class app
 {
-    protected $sector = "";
-    protected $page = "";
+    protected $sector   = "";
+    protected $page     = "";
+
+    const DB_NAME       = "gameshop";
+    const DB_USER       = "root";
+    const DB_PASS       = "1992maxime";
+    const DB_HOST       = "localhost";
+
+    private static $database;
+
+    public static function getDB()
+    {
+        if(self::$database === null)
+        {
+            self::$database = new database(self::DB_NAME, self::DB_USER, self::DB_PASS, self::DB_HOST);
+        }
+        return self::$database;
+    }
 
     /**
      * @return string : Retourne le nom désigner en post pour le secteur
@@ -48,6 +64,8 @@ class app
     {
         $this->page = $postPage;
     }
+
+
 }
 
 class constante extends app{
