@@ -8,9 +8,6 @@
 
 namespace App;
 
-
-use \PDO;
-
 class database
 {
 
@@ -18,7 +15,7 @@ class database
     private $user;
     private $pass;
     private $host;
-    private $pdo;
+    private $db;
 
     public function __construct($dbname, $user = "root", $pass = "1992maxime", $host = "lcoalhost")
     {
@@ -28,36 +25,16 @@ class database
         $this->host         = $host;
     }
 
-    private function getPDO()
+    private function getDB()
     {
-        if($this->pdo === null)
+        if($this->db === null)
         {
-            $pdo = new PDO('mysql:dbname=gameshop;host=localhost', 'root', '1992maxime');
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $this->pdo = $pdo;
+            $db = mysql_connect($this->host, $this->user, $this->pass)or die(mysql_error());
+            $db .= mysql_select_db($this->dbname)or die(mysql_error());
 
         }
-        return $this->pdo;
+        return $this->db;
     }
 
-    public function query($statement, $class_name)
-    {
-        $req = $this->getPDO()->query($statement);
-        $datas = $req->fetchAll(PDO::FETCH_CLASS, $class_name);
-        return $datas;
-    }
 
-    public function prepare($statement, $attributes, $class_name, $one = false)
-    {
-        $req = $this->getPDO()->prepare($statement);
-        $req->execute($attributes);
-        $req->setFetchMode(PDO::FETCH_CLASS, $class_name);
-        if($one)
-        {
-            $datas = $req->fetch();
-        }else{
-            $datas = $req->fetchAll();
-        }
-        return $datas;
-    }
 }
