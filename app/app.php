@@ -8,10 +8,46 @@
 
 namespace App;
 
-
+/**
+ * Class app
+ * @package App
+ */
 class app
 {
+    protected $sector = "";
+    protected $page = "";
 
+    /**
+     * @return string : Retourne le nom désigner en post pour le secteur
+     */
+    public function getSector()
+    {
+        return $this->sector;
+    }
+
+    /**
+     * @return string : Retourne le nom désigner en post pour la page
+     */
+    public function getPage()
+    {
+        return $this->page;
+    }
+
+    /**
+     * @param $postSector string : Génère le nom en variable pour le secteur
+     */
+    public function postSector($postSector)
+    {
+        $this->sector = $postSector;
+    }
+
+    /**
+     * @param $postPage string : Génère le nom en variable pour la page
+     */
+    public function postPage($postPage)
+    {
+        $this->page = $postPage;
+    }
 }
 
 class constante extends app{

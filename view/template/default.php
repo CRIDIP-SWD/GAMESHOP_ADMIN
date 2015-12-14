@@ -603,27 +603,7 @@
                         <ul class="dropdown-menu dropdown-custom dropdown-menu-right">
                             <li class="dropdown-header text-center">Compte</li>
                             <li>
-                                <a href="page_ready_lock_screen.html"><i class="fa fa-lock fa-fw pull-right"></i> Lock Account</a>
-                                <a href="login.html"><i class="fa fa-ban fa-fw pull-right"></i> Logout</a>
-                            </li>
-                            <li class="dropdown-header text-center">Activity</li>
-                            <li>
-                                <div class="alert alert-success alert-alt">
-                                    <small>5 min ago</small><br>
-                                    <i class="fa fa-thumbs-up fa-fw"></i> You had a new sale ($10)
-                                </div>
-                                <div class="alert alert-info alert-alt">
-                                    <small>10 min ago</small><br>
-                                    <i class="fa fa-arrow-up fa-fw"></i> Upgraded to Pro plan
-                                </div>
-                                <div class="alert alert-warning alert-alt">
-                                    <small>3 hours ago</small><br>
-                                    <i class="fa fa-exclamation fa-fw"></i> Running low on space<br><strong>18GB in use</strong> 2GB left
-                                </div>
-                                <div class="alert alert-danger alert-alt">
-                                    <small>Yesterday</small><br>
-                                    <i class="fa fa-bug fa-fw"></i> <a href="javascript:void(0)" class="alert-link">New bug submitted</a>
-                                </div>
+                                <a href="login.html"><i class="fa fa-ban fa-fw pull-right"></i> Déconnexion</a>
                             </li>
                         </ul>
                     </li>
@@ -644,9 +624,9 @@
                     </div>
                 </div>
                 <ul class="breadcrumb breadcrumb-top">
-                    <li>Pages</li>
-                    <li>Get Started</li>
-                    <li><a href="">Blank</a></li>
+                    <li><?= $constante::NOM_SITE; ?></li>
+                    <?php if(!empty($app->getSector())){echo "<li>".$app->getSector()."</li>";} ?>
+                    <?php if(!empty($app->getPage())){echo "<li>".$app->getPage()."</li>";} ?>
                 </ul>
                 <!-- END Blank Header -->
                 <?= $content; ?>
