@@ -15,6 +15,7 @@ class categorie
 
     public static function getAll()
     {
+        
         $sql = mysql_query("SELECT * FROM categories")or die(mysql_error());
         $datas = mysql_fetch_array($sql);
         return $datas;
